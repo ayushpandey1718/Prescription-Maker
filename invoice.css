@@ -1,0 +1,154 @@
+/* Reset some default styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+#invoiceOutput {
+  background-color: #fff;
+  border: 2px solid #000;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+#qrCodeContainer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #000;
+  padding: 10px;
+}
+
+th {
+  background-color: #f2f2f2;
+  text-align: center;
+  font-weight: bold;
+}
+
+td {
+  text-align: center;
+}
+
+/* Prescription Paper Styles */
+#prescriptionPaper {
+  background-color: #fff;
+  background-image: url('prescription-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2px solid #000;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 20px 0;
+  font-size: 16px;
+  line-height: 1.4;
+  position: relative;
+}
+
+/* Clinic Logo */
+.clinic-logo {
+  position: absolute;
+  top: 60px;
+  left: 30px; /* Adjust the left position to move the logo to the left */
+  width: 120px; /* Adjust the logo size as needed */
+  height: auto;
+}
+
+/* Clinic Name */
+.clinic-name {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* Doctor's Information */
+.doctor-info {
+  
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* "Save as PDF" button */
+#save-as-pdf {
+  display: block;
+  margin: 20px auto; /* Center the button horizontally and provide spacing from the prescription container */
+  padding: 10px 20px; /* Add some padding for a neat appearance */
+  background-color: #007BFF; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Hover effect for the button */
+#save-as-pdf:hover {
+  background-color: #0056b3; /* Hover background color */
+}
+
+@media print {
+  #save-as-pdf {
+    display: none;
+  }
+}
+  
+
+/* Responsive design for small screens */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  #invoiceOutput {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  /* Responsive prescription paper styles */
+  #prescriptionPaper {
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  /* Adjust the logo position for small screens */
+  .clinic-logo {
+    position: static; /* or any other positioning that fits your design */
+    width: 60px; /* Adjust the logo size for small screens */
+    margin: 0 auto; /* Center the logo horizontally */
+  }
+}

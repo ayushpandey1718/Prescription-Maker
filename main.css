@@ -1,0 +1,156 @@
+/* Reset some default styles */
+body,
+html,
+h1,
+table {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background: linear-gradient(to bottom, #f6f6f6, #e0e0e0);
+}
+
+h1 {
+  text-align: center;
+  padding: 20px 0;
+  color: #333;
+  font-size: 36px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add scale and shadow transition */
+}
+
+form:hover {
+  transform: scale(1.02); /* Scale up slightly on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+}
+
+label {
+  font-weight: bold;
+  color: #555;
+}
+
+#medicineTable {
+  width: 100%;
+  margin-top: 30px;
+  border-collapse: collapse;
+}
+
+#medicineTable th {
+  background-color: #007bff;
+  color: #fff;
+  text-align: left;
+  padding: 15px;
+  font-size: 18px;
+  border-bottom: 2px solid #0056b3;
+}
+
+#medicineTable td {
+  border: 1px solid #ccc;
+  padding: 15px;
+  font-size: 16px;
+}
+
+#medicineTable .removeMedicine {
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#addMedicine,
+#generateInvoice,
+#clearForm {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  margin-top: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+#addMedicine:hover,
+#generateInvoice:hover,
+#clearForm:hover,
+.removeMedicine:hover {
+  background-color: #45a049;
+  transform: scale(1.05); /* Add a slight scale-up effect on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+#invoiceOutput {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  font-size: 18px;
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add scale and shadow transition */
+}
+
+#invoiceOutput:hover {
+  transform: scale(1.02); /* Scale up slightly on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+}
+
+/* Style the select element */
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+/* Style the dropdown arrow */
+select::after {
+  content: '\25BC'; /* Unicode character for a down arrow */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 18px;
+}
+
+/* Change styles on select hover and focus */
+select:hover,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Style the option elements consistently */
+select option {
+  padding: 5px 10px; /* Adjust padding for better readability */
+}
+
+/* Style the selected option */
+select option:checked {
+  background-color: #007bff;
+  color: #fff;
+}
+
